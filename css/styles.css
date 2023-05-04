@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+main {
+    text-align: center;
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    width: 50%;
+}
+
+textarea {
+    resize: none;
+    max-width: 90%;
+}
