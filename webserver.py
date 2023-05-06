@@ -23,15 +23,19 @@ def handleRequest(connectionSocket): # Handle request yang valid
         # Mengirim konten dari yang diminta oleh client
         connectionSocket.sendall(outputFile)
         connectionSocket.send('\r\n'.encode())
-        print('Successfully send {}'.format(fileName))
 
         # Close client socket
         connectionSocket.close()
 
 def deniedRequest(connectionSocket): # Handle request yang tidak valid
+        # File request yang tidak valid
+        with open('nonexist.html', 'rb') as f:
+            outputFile = f.read()
+
         # Mengirim respons apabila file yang diminta tidak ada
         connectionSocket.send('HTTP/1.1 404 Not Found\r\n\r\n'.encode())
-        connectionSocket.send('.nonexist.html\r\n'.encode())
+        connectionSocket.sendall(outputFile)
+        connectionSocket.send('\r\n'.encode())
 
         # Close client socket
         connectionSocket.close()
@@ -56,10 +60,11 @@ def main(): # Main program
             handleRequest(connectionSocket)
         except IOError:
             deniedRequest(connectionSocket)
-                          
+        
+        print('Succesfully {} file to host {}, with port number {}'.format(addr[0], addr[1]))
+
     serverSocket.close()
     sys.exit()
 
 if __name__ == '__main__':
     main()
-
