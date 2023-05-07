@@ -12,10 +12,6 @@ def handleRequest(connectionSocket): # Handle request yang valid
         # Maka nanti tidak perlu dilakukan encoding
         with open(fileName, 'rb') as f:
             outputFile = f.read() 
-        '''
-        f = open(fileName)
-        outputFile = f.read()
-        '''
 
         # Mengirim HTTP Header
         connectionSocket.send('HTTP/1.1 200 OK\r\n\r\n'.encode())
@@ -23,7 +19,7 @@ def handleRequest(connectionSocket): # Handle request yang valid
         # Mengirim konten dari yang diminta oleh client
         connectionSocket.sendall(outputFile)
         connectionSocket.send('\r\n'.encode())
-
+        print(fileName)
         # Close client socket
         connectionSocket.close()
 
