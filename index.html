@@ -6,28 +6,32 @@
     <meta name="viewport" content="width=s, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="net.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rubik&display=swap" rel="stylesheet">
     <title>Tubes Jaringan Komputer</title>
 </head>
 <body>
     <script src="index.js"></script>
-    <main>
-        <h1>ArDezTha's Website</h1>
-        <h2>Congrats on accessing our newbie Website<h2>
-        <img src = "neon.jpg" alt = "">
-        <form method = "">
-            <textarea 
+    <main id="main-content">
+        <h1 class="text-title">ArDezTha's Website</h1>
+        <h2 class="text-title">Congrats on accessing our newbie Website<h2>
+        <img src = "pom-pom.png" alt = "pom-pom" id="pom-pom">
+        <form action="#" method = "post">
+            <textarea
+            id = "client-thought"
             name = "client-thought" 
-            id = "client-thought" 
-            cols = "50" 
+            cols = "47" 
             rows = "10"
-            placeholder = "Enter your thoughts"
+            placeholder = "Write your thoughts"
             ></textarea>
             <br>
-            <button id = "client-thoughts" 
+            <button
+            id = "send-btn"
             type = "submit"
             value = "thoughts-value"
             onclick = "submissionMsg()"
-            >Submit</button>
+            >Send</button>
         </form>
     </main>
 </body>
