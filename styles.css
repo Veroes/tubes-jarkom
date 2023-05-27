@@ -34,7 +34,7 @@ textarea {
     width: 230px;
 }
 
-#send-btn {
+#send-btn, .test-btn {
     margin-top: 25px;
     border-radius: 25px;
     padding: 20px 25px;
@@ -55,7 +55,7 @@ textarea {
 }
 
 
-#send-btn:hover {
+#send-btn:hover, .test-btn:hover {
     background-color: blue;
     color: white;
 }

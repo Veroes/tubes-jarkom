@@ -12,12 +12,11 @@
     <title>Tubes Jaringan Komputer</title>
 </head>
 <body>
-    <script src="index.js"></script>
     <main id="main-content">
         <h1 class="text-title">ArDezTha's Website</h1>
         <h2 class="text-title">Congrats on accessing our newbie Website<h2>
         <img src = "pom-pom.png" alt = "pom-pom" id="pom-pom">
-        <form action="#" method = "post">
+        <form action="localhost:8001" method = "post">
             <textarea
             id = "client-thought"
             name = "client-thought" 
@@ -29,10 +28,11 @@
             <button
             id = "send-btn"
             type = "submit"
-            value = "thoughts-value"
-            onclick = "submissionMsg()"
+            value = "Submit"
+            onclick = "handleButton()"
             >Send</button>
         </form>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
