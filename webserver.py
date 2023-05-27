@@ -57,7 +57,7 @@ def main(): # Main program
         except IOError:
             deniedRequest(connectionSocket)
         
-        print('Succesfully file to host {}, with port number {}'.format(addr[0], addr[1]))
+        print('Succesfully send file to host {}, with port number {}'.format(addr[0], addr[1]))
 
     serverSocket.close()
     sys.exit()
