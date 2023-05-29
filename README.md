@@ -4,7 +4,7 @@
 
 ### Setup Web Server
 
-1. gunakan command 'Git clone https://github.com/Veroes/tubes-jarkom.git'
+1. gunakan command 'Git clone https://github.com/Veroes/tubes-jarkom.git' (pastikan Git sudah terininstall di komputer anda)
 
 2. Buka directory tersebut dan jalankan webserver.py
 
